@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { StartComponent } from './start/start.component';
 import { RulesComponent } from './rules/rules.component';
 import { LevelsComponent } from './levels/levels.component';
-import { Level1nextComponent } from './level1next/level1next.component';
+import { Level2Component } from './level2/level2.component';
 
 const appRoutes: Routes = [
   {
@@ -19,8 +19,8 @@ const appRoutes: Routes = [
     component: LevelsComponent
   },
   {
-    path: 'level-1/:id',
-    component: Level1nextComponent
+    path: 'level2/:id',
+    component: Level2Component
   }
 ];
 

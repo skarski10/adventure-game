@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { Level } from '../level.model';
-import { LEVEL1 } from '../level1';
-import { LevelService } from '../level.service';
+import { Answer } from '../answer.model';
 import { Router } from '@angular/router';
+import { StartComponent } from './start/start-component';
 
 @Component({
   selector: 'app-levels',
   templateUrl: './levels.component.html',
-  styleUrls: ['./levels.component.css'],
-  providers: [LevelService]
+  styleUrls: ['./levels.component.css']
 })
-export class LevelsComponent implements OnInit{
-  levels: Level[];
+export class LevelsComponent {
+  myPlayer = StartComponent.newPlayer;
+  constructor (private router: Router) {}
+  answers: Answer[] = [
+    new Answer("Option 1", 1),
+    new Answer("Option 2", 2),
+    new Answer("Option 3", 3),
+    new Answer("Option 4", 4)
+  ];
 
-  constructor(private router: Router, private levelService: LevelService) { }
 
-  ngOnInit(){
-    this.levels = this.levelService.getLevel1();
-  }
-
-  goToSingleLevel(clickedLevel: Level) {
-    this.router.navigate(['level-1', clickedLevel.id]);
-  }
+  goToLevel2Page(clickedResponse: Answer) {
+    this.router.navigate(['level2', clickedResponse.id]);
+  };
 }

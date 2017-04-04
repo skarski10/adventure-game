@@ -8,7 +8,8 @@ import { StartComponent } from './start/start.component';
 import { routing } from './app.routing';
 import { RulesComponent } from './rules/rules.component';
 import { LevelsComponent } from './levels/levels.component';
-import { Level1nextComponent } from './level1next/level1next.component';
+import { Level2Component } from './level2/level2.component';
+
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { Level1nextComponent } from './level1next/level1next.component';
     StartComponent,
     RulesComponent,
     LevelsComponent,
-    Level1nextComponent
+    Level2Component,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./start.component.css']
 })
 export class StartComponent implements OnInit {
+  newPlayer: Player;
+  submitForm (name: string, gender: string) {
+    this.newPlayer = new Player(name, gender);
+  }
 
   constructor() { }
 

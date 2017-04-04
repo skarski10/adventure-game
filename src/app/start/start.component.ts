@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Answer, Player } from '../game.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.css']
+
 })
 export class StartComponent implements OnInit {
-  newPlayer: Player;
+  constructor(private router: Router) {}
   submitForm (name: string, gender: string) {
-    this.newPlayer = new Player(name, gender);
+    var newPlayer = new Player(name, gender);
+    playerInfo.push(newPlayer);
   }
 
-  constructor() { }
-
+  goToLevels(){
+    this.router.navigate(['levels']);
+  }
   ngOnInit() {
   }
-
 }
+  export var playerInfo: Player[] = [];

@@ -1,6 +1,9 @@
 {{answerId}}
 <h2>Level 2</h2>
 
-<div *ngFor="let answer of answers" (click)="goToLevel3Page(answer)">
-  {{answer.response}}
+<div>
+  <a (click)="goToLevel3aPage(answer)">{{answer[0].response}}</a>
+  <a (click)="goToLevel3bPage(answer)">{{answer[1].response}}</a>
 </div>
+
+You chose {{answerToDisplay.response}} on level 1!

@@ -1,10 +1,10 @@
 <div class="">
   <form class="player-selection" action="index.html" method="post">
-    <input #newName type="text" name="name" value="" placeholder="Enter Name">
+    <input #newName type="text" placeholder="Enter Name">
     <select #newGender>
-      <option value="option">Male</option>
-      <option value="option">Female</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
     </select>
-    <button (click)="submitForm(newName.value, newGender.value)">Enter</button>
+    <button (click)="submitForm(newName.value, newGender.value)" (click)="goToLevels()">Enter</button>
   </form>
 </div>

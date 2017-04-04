@@ -1,0 +1,31 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+import { StartComponent } from './start/start.component';
+import { routing } from './app.routing';
+import { RulesComponent } from './rules/rules.component';
+import { LevelsComponent } from './levels/levels.component';
+import { Level1nextComponent } from './level1next/level1next.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    StartComponent,
+    RulesComponent,
+    LevelsComponent,
+    Level1nextComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    routing
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
